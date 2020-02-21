@@ -1,4 +1,12 @@
+import 'package:financial_money_app/src/FamilyPage.dart';
+import 'package:financial_money_app/src/InvestmentPage.dart';
+import 'package:financial_money_app/src/LoanPage.dart';
 import 'package:flutter/material.dart';
+
+import 'BillsPage.dart';
+import 'ExpensesPage.dart';
+import 'FuturePlanPage.dart';
+import 'SavingsPage.dart';
 
 class PlanningPage extends StatefulWidget {
   PlanningPage([Key key]) : super(key: key);
@@ -8,13 +16,6 @@ class PlanningPage extends StatefulWidget {
 }
 
 class _PlanningPageState extends State<PlanningPage> {
-  int route = 0;
-
-  void onTapped(int value) {
-    setState(() {
-      route = value;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +56,7 @@ class _PlanningPageState extends State<PlanningPage> {
       children: <Widget>[
         _buildBackgroundCover(),
         _buildGreetings(),
-        _buildMoodHolder(),
+        _buildAssetsPlan(),
       ],
     );
   }
@@ -99,7 +100,7 @@ class _PlanningPageState extends State<PlanningPage> {
     );
   }
 
-  _buildMoodHolder() {
+  _buildAssetsPlan() {
     return Positioned(
       bottom: -20,
       child: Container(
@@ -194,7 +195,11 @@ class _PlanningPageState extends State<PlanningPage> {
                     height: 6.0,
                   ),
                   RaisedButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      Navigator.push(context, 
+                        MaterialPageRoute(builder: 
+                        (context) => BillsPage()));
+                    },
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(80.0)
                     ), 
@@ -256,7 +261,7 @@ class _PlanningPageState extends State<PlanningPage> {
             children: <Widget>[
               CircleAvatar(
                 backgroundColor: Colors.grey,
-                backgroundImage: NetworkImage("https://cdn.pixabay.com/photo/2016/08/10/15/01/credit-card-1583534_960_720.jpg"),
+                backgroundImage: NetworkImage("https://cdn.pixabay.com/photo/2015/10/31/08/50/coins-1015125_960_720.jpg"),
                 radius: 36,
               ),
               SizedBox(width: 10.0),
@@ -273,7 +278,7 @@ class _PlanningPageState extends State<PlanningPage> {
                         ),
                         children: <TextSpan>[
                           TextSpan(
-                              text: 'PAYMENT OF BILLS',
+                              text: 'EMERGENCY EXPENSES',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 16,
@@ -285,7 +290,9 @@ class _PlanningPageState extends State<PlanningPage> {
                     height: 6.0,
                   ),
                   RaisedButton(
-                    onPressed: (){},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> ExpensesPage()));
+                    },
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(80.0)
                     ), 
@@ -376,7 +383,9 @@ class _PlanningPageState extends State<PlanningPage> {
                     height: 6.0
                   ),
                   RaisedButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => LoanPage()));
+                    },
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(80.0),
                     ),
@@ -438,7 +447,7 @@ class _PlanningPageState extends State<PlanningPage> {
             children: <Widget>[
               CircleAvatar(
                 backgroundColor: Colors.grey,
-                backgroundImage: NetworkImage("https://cdn.pixabay.com/photo/2016/07/06/16/22/debt-1500774_960_720.png"),
+                backgroundImage: NetworkImage("https://cdn.pixabay.com/photo/2014/07/10/10/19/steps-388914_960_720.jpg"),
                 radius: 36,
               ),
               SizedBox(width: 10.0),
@@ -455,7 +464,7 @@ class _PlanningPageState extends State<PlanningPage> {
                         ),
                         children: <TextSpan>[
                           TextSpan(
-                              text: 'LOAN HANDLING',
+                              text: 'PLAN FOR FUTURE',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 16,
@@ -467,7 +476,9 @@ class _PlanningPageState extends State<PlanningPage> {
                     height: 6.0
                   ),
                   RaisedButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> FuturePlanPage()));
+                    },
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(80.0),
                     ),
@@ -529,7 +540,7 @@ class _PlanningPageState extends State<PlanningPage> {
             children: <Widget>[
               CircleAvatar(
                 backgroundColor: Colors.grey,
-                backgroundImage: NetworkImage("https://cdn.pixabay.com/photo/2016/07/06/16/22/debt-1500774_960_720.png"),
+                backgroundImage: NetworkImage("https://cdn.pixabay.com/photo/2016/06/01/08/40/money-1428594_960_720.jpg"),
                 radius: 36,
               ),
               SizedBox(width: 10.0),
@@ -546,7 +557,7 @@ class _PlanningPageState extends State<PlanningPage> {
                         ),
                         children: <TextSpan>[
                           TextSpan(
-                              text: 'LOAN HANDLING',
+                              text: 'SAVINGS',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 16,
@@ -558,7 +569,9 @@ class _PlanningPageState extends State<PlanningPage> {
                     height: 6.0
                   ),
                   RaisedButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>SavingsPage()));
+                    },
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(80.0),
                     ),
@@ -620,7 +633,7 @@ class _PlanningPageState extends State<PlanningPage> {
             children: <Widget>[
               CircleAvatar(
                 backgroundColor: Colors.grey,
-                backgroundImage: NetworkImage("https://cdn.pixabay.com/photo/2016/07/06/16/22/debt-1500774_960_720.png"),
+                backgroundImage: NetworkImage("https://cdn.pixabay.com/photo/2017/08/30/07/56/money-2696228_960_720.jpg"),
                 radius: 36,
               ),
               SizedBox(width: 10.0),
@@ -632,12 +645,12 @@ class _PlanningPageState extends State<PlanningPage> {
                         style: TextStyle(
                           color: Colors.red,
                           fontSize: 12,
-                          fontWeight: FontWeight.w400,
+                          fontWeight: FontWeight.w400, 
                           height: 1.3,
                         ),
                         children: <TextSpan>[
                           TextSpan(
-                              text: 'LOAN HANDLING',
+                              text: 'INVESTMENT',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 16,
@@ -649,7 +662,9 @@ class _PlanningPageState extends State<PlanningPage> {
                     height: 6.0
                   ),
                   RaisedButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> InvestmentPage()));
+                    },
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(80.0),
                     ),
@@ -711,7 +726,7 @@ class _PlanningPageState extends State<PlanningPage> {
             children: <Widget>[
               CircleAvatar(
                 backgroundColor: Colors.grey,
-                backgroundImage: NetworkImage("https://cdn.pixabay.com/photo/2016/07/06/16/22/debt-1500774_960_720.png"),
+                backgroundImage: NetworkImage("https://cdn.pixabay.com/photo/2017/06/27/11/48/team-spirit-2447163_960_720.jpg"),
                 radius: 36,
               ),
               SizedBox(width: 10.0),
@@ -728,7 +743,7 @@ class _PlanningPageState extends State<PlanningPage> {
                         ),
                         children: <TextSpan>[
                           TextSpan(
-                              text: 'LOAN HANDLING',
+                              text: 'FAMILY & SPENDING',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 16,
@@ -740,7 +755,9 @@ class _PlanningPageState extends State<PlanningPage> {
                     height: 6.0
                   ),
                   RaisedButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> FamilyPage()));
+                    },
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(80.0),
                     ),
