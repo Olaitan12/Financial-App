@@ -1,11 +1,11 @@
-import 'package:financial_money_app/src/FamilyPage.dart';
-import 'package:financial_money_app/src/InvestmentPage.dart';
-import 'package:financial_money_app/src/LoanPage.dart';
-import 'package:flutter/material.dart';
 
+import 'package:flutter/material.dart';
 import 'BillsPage.dart';
 import 'ExpensesPage.dart';
+import 'FamilyPage.dart';
 import 'FuturePlanPage.dart';
+import 'InvestmentPage.dart';
+import 'LoanPage.dart';
 import 'SavingsPage.dart';
 
 class PlanningPage extends StatefulWidget {
