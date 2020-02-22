@@ -1,12 +1,13 @@
 
 import 'package:flutter/material.dart';
-import 'BillsPage.dart';
-import 'ExpensesPage.dart';
-import 'FamilyPage.dart';
-import 'FuturePlanPage.dart';
-import 'InvestmentPage.dart';
-import 'LoanPage.dart';
-import 'SavingsPage.dart';
+
+import 'pages/BillsPage.dart';
+import 'pages/ExpensesPage.dart';
+import 'pages/FamilyPage.dart';
+import 'pages/FuturePlanPage.dart';
+import 'pages/InvestmentPage.dart';
+import 'pages/LoanPage.dart';
+import 'pages/SavingsPage.dart';
 
 class PlanningPage extends StatefulWidget {
   PlanningPage([Key key]) : super(key: key);
@@ -570,7 +571,7 @@ class _PlanningPageState extends State<PlanningPage> {
                   ),
                   RaisedButton(
                     onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>SavingsPage()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> SavingsPage()));
                     },
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(80.0),

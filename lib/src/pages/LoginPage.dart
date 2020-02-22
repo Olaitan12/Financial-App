@@ -1,6 +1,6 @@
 import 'package:financial_money_app/Widgets/bezierContainer.dart';
 import 'package:flutter/material.dart';
-import 'PlanningPage.dart';
+import '../PlanningPage.dart';
 import 'SignUpPage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
