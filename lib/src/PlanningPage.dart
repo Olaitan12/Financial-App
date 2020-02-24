@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import 'pages/BillsPage.dart';
@@ -17,7 +16,6 @@ class PlanningPage extends StatefulWidget {
 }
 
 class _PlanningPageState extends State<PlanningPage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -84,7 +82,8 @@ class _PlanningPageState extends State<PlanningPage> {
         children: <Widget>[
           Text(
             "Hi Mike",
-            style: TextStyle(fontSize: 36, fontWeight: FontWeight.w500, color: Colors.white),
+            style: TextStyle(
+                fontSize: 36, fontWeight: FontWeight.w500, color: Colors.white),
           ),
           SizedBox(
             height: 10,
@@ -105,23 +104,20 @@ class _PlanningPageState extends State<PlanningPage> {
     return Positioned(
       bottom: -20,
       child: Container(
-        height: 40,
-        width: MediaQuery.of(context).size.width - 40,
-        padding: EdgeInsets.all(10),
-        decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.all(Radius.circular(25)),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black12,
-                spreadRadius: 5.8,
-                blurRadius: 5.8,
-              )
-            ]),
-        child: Text(
-          'CHOOSE HOW YOU WANT TO PLAN YOUR ASSETS'
-        )
-      ),
+          height: 40,
+          width: MediaQuery.of(context).size.width - 40,
+          padding: EdgeInsets.all(10),
+          decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.all(Radius.circular(25)),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black12,
+                  spreadRadius: 5.8,
+                  blurRadius: 5.8,
+                )
+              ]),
+          child: Text('CHOOSE HOW YOU WANT TO PLAN YOUR ASSETS')),
     );
   }
 
@@ -134,9 +130,7 @@ class _PlanningPageState extends State<PlanningPage> {
           Text(
             title,
             style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w500,
-              color: Colors.black),
+                fontSize: 18, fontWeight: FontWeight.w500, color: Colors.black),
           ),
         ],
       ),
@@ -167,61 +161,60 @@ class _PlanningPageState extends State<PlanningPage> {
             children: <Widget>[
               CircleAvatar(
                 backgroundColor: Colors.grey,
-                backgroundImage: NetworkImage("https://cdn.pixabay.com/photo/2016/08/10/15/01/credit-card-1583534_960_720.jpg"),
+                backgroundImage: NetworkImage(
+                    "https://cdn.pixabay.com/photo/2016/08/10/15/01/credit-card-1583534_960_720.jpg"),
                 radius: 36,
               ),
               SizedBox(width: 10.0),
               Column(
                 children: <Widget>[
                   RichText(
-                    text: TextSpan(
-                        text: 'Assets\n',
-                        style: TextStyle(
-                          color: Colors.red,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w400,
-                          height: 1.3,
-                        ),
-                        children: <TextSpan>[
-                          TextSpan(
-                              text: 'PAYMENT OF BILLS',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                              )),
-                        ])
-                  ),
+                      text: TextSpan(
+                          text: 'Assets\n',
+                          style: TextStyle(
+                            color: Colors.red,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400,
+                            height: 1.3,
+                          ),
+                          children: <TextSpan>[
+                        TextSpan(
+                            text: 'PAYMENT OF BILLS',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            )),
+                      ])),
                   SizedBox(
                     height: 6.0,
                   ),
                   RaisedButton(
-                    onPressed: (){
-                      Navigator.push(context, 
-                        MaterialPageRoute(builder: 
-                        (context) => BillsPage()));
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => BillsPage()));
                     },
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(80.0)
-                    ), 
+                        borderRadius: BorderRadius.circular(80.0)),
                     padding: const EdgeInsets.all(0.0),
                     child: Ink(
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: [Colors.redAccent, Colors.red]),
-                        borderRadius: BorderRadius.all(Radius.circular(80.0))
-                      ),
+                          gradient: LinearGradient(
+                              colors: [Colors.redAccent, Colors.red]),
+                          borderRadius:
+                              BorderRadius.all(Radius.circular(80.0))),
                       child: Container(
-                        constraints: BoxConstraints(
-                          minHeight: 36,
-                          minWidth: 88,
-                        ),
-                        alignment: Alignment.center,
-                        child: Text('Manage', style: TextStyle(
-                          fontWeight: FontWeight.w300,
-                          fontSize: 17,
-                          color: Colors.white,
-                        ))
-                      ),
+                          constraints: BoxConstraints(
+                            minHeight: 36,
+                            minWidth: 88,
+                          ),
+                          alignment: Alignment.center,
+                          child: Text('Manage',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w300,
+                                fontSize: 17,
+                                color: Colors.white,
+                              ))),
                     ),
                   )
                 ],
@@ -262,59 +255,62 @@ class _PlanningPageState extends State<PlanningPage> {
             children: <Widget>[
               CircleAvatar(
                 backgroundColor: Colors.grey,
-                backgroundImage: NetworkImage("https://cdn.pixabay.com/photo/2015/10/31/08/50/coins-1015125_960_720.jpg"),
+                backgroundImage: NetworkImage(
+                    "https://cdn.pixabay.com/photo/2015/10/31/08/50/coins-1015125_960_720.jpg"),
                 radius: 36,
               ),
               SizedBox(width: 10.0),
               Column(
                 children: <Widget>[
                   RichText(
-                    text: TextSpan(
-                        text: 'Assets\n',
-                        style: TextStyle(
-                          color: Colors.red,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w400,
-                          height: 1.3,
-                        ),
-                        children: <TextSpan>[
-                          TextSpan(
-                              text: 'EMERGENCY EXPENSES',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                              )),
-                        ])
-                  ),
+                      text: TextSpan(
+                          text: 'Assets\n',
+                          style: TextStyle(
+                            color: Colors.red,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400,
+                            height: 1.3,
+                          ),
+                          children: <TextSpan>[
+                        TextSpan(
+                            text: 'EMERGENCY EXPENSES',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            )),
+                      ])),
                   SizedBox(
                     height: 6.0,
                   ),
                   RaisedButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> ExpensesPage()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ExpensesPage()));
                     },
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(80.0)
-                    ), 
+                        borderRadius: BorderRadius.circular(80.0)),
                     padding: const EdgeInsets.all(0.0),
                     child: Ink(
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: [Colors.redAccent, Colors.red]),
-                        borderRadius: BorderRadius.all(Radius.circular(80.0))
-                      ),
+                          gradient: LinearGradient(
+                              colors: [Colors.redAccent, Colors.red]),
+                          borderRadius:
+                              BorderRadius.all(Radius.circular(80.0))),
                       child: Container(
-                        constraints: BoxConstraints(
-                          minHeight: 36,
-                          minWidth: 88,
-                        ),
-                        alignment: Alignment.center,
-                        child: Text('Manage', style: TextStyle(
-                          fontWeight: FontWeight.w300,
-                          fontSize: 17,
-                          color: Colors.white,
-                        ))
-                      ),
+                          constraints: BoxConstraints(
+                            minHeight: 36,
+                            minWidth: 88,
+                          ),
+                          alignment: Alignment.center,
+                          child: Text('Manage',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w300,
+                                fontSize: 17,
+                                color: Colors.white,
+                              ))),
                     ),
                   )
                 ],
@@ -355,37 +351,36 @@ class _PlanningPageState extends State<PlanningPage> {
             children: <Widget>[
               CircleAvatar(
                 backgroundColor: Colors.grey,
-                backgroundImage: NetworkImage("https://cdn.pixabay.com/photo/2016/07/06/16/22/debt-1500774_960_720.png"),
+                backgroundImage: NetworkImage(
+                    "https://cdn.pixabay.com/photo/2016/07/06/16/22/debt-1500774_960_720.png"),
                 radius: 36,
               ),
               SizedBox(width: 10.0),
               Column(
                 children: <Widget>[
                   RichText(
-                    text: TextSpan(
-                        text: 'Assets\n',
-                        style: TextStyle(
-                          color: Colors.red,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w400,
-                          height: 1.3,
-                        ),
-                        children: <TextSpan>[
-                          TextSpan(
-                              text: 'LOAN HANDLING',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                              )),
-                        ])
-                  ),
-                  SizedBox(
-                    height: 6.0
-                  ),
+                      text: TextSpan(
+                          text: 'Assets\n',
+                          style: TextStyle(
+                            color: Colors.red,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400,
+                            height: 1.3,
+                          ),
+                          children: <TextSpan>[
+                        TextSpan(
+                            text: 'LOAN HANDLING',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            )),
+                      ])),
+                  SizedBox(height: 6.0),
                   RaisedButton(
-                    onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => LoanPage()));
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => LoanPage()));
                     },
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(80.0),
@@ -393,21 +388,22 @@ class _PlanningPageState extends State<PlanningPage> {
                     padding: const EdgeInsets.all(0.0),
                     child: Ink(
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: [Colors.redAccent, Colors.red]),
+                        gradient: LinearGradient(
+                            colors: [Colors.redAccent, Colors.red]),
                         borderRadius: BorderRadius.all(Radius.circular(80.0)),
                       ),
                       child: Container(
-                        constraints: BoxConstraints(
-                          minHeight: 36,
-                          minWidth: 88,
-                        ),
-                        alignment: Alignment.center,
-                        child: Text('Manage', style: TextStyle(
-                          fontWeight: FontWeight.w300,
-                          fontSize: 17,
-                          color: Colors.white,
-                        ))
-                      ),
+                          constraints: BoxConstraints(
+                            minHeight: 36,
+                            minWidth: 88,
+                          ),
+                          alignment: Alignment.center,
+                          child: Text('Manage',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w300,
+                                fontSize: 17,
+                                color: Colors.white,
+                              ))),
                     ),
                   )
                 ],
@@ -448,37 +444,38 @@ class _PlanningPageState extends State<PlanningPage> {
             children: <Widget>[
               CircleAvatar(
                 backgroundColor: Colors.grey,
-                backgroundImage: NetworkImage("https://cdn.pixabay.com/photo/2014/07/10/10/19/steps-388914_960_720.jpg"),
+                backgroundImage: NetworkImage(
+                    "https://cdn.pixabay.com/photo/2014/07/10/10/19/steps-388914_960_720.jpg"),
                 radius: 36,
               ),
               SizedBox(width: 10.0),
               Column(
                 children: <Widget>[
                   RichText(
-                    text: TextSpan(
-                        text: 'Assets\n',
-                        style: TextStyle(
-                          color: Colors.red,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w400,
-                          height: 1.3,
-                        ),
-                        children: <TextSpan>[
-                          TextSpan(
-                              text: 'PLAN FOR FUTURE',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                              )),
-                        ])
-                  ),
-                  SizedBox(
-                    height: 6.0
-                  ),
+                      text: TextSpan(
+                          text: 'Assets\n',
+                          style: TextStyle(
+                            color: Colors.red,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400,
+                            height: 1.3,
+                          ),
+                          children: <TextSpan>[
+                        TextSpan(
+                            text: 'PLAN FOR FUTURE',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            )),
+                      ])),
+                  SizedBox(height: 6.0),
                   RaisedButton(
-                    onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> FuturePlanPage()));
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => FuturePlanPage()));
                     },
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(80.0),
@@ -486,21 +483,22 @@ class _PlanningPageState extends State<PlanningPage> {
                     padding: const EdgeInsets.all(0.0),
                     child: Ink(
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: [Colors.redAccent, Colors.red]),
+                        gradient: LinearGradient(
+                            colors: [Colors.redAccent, Colors.red]),
                         borderRadius: BorderRadius.all(Radius.circular(80.0)),
                       ),
                       child: Container(
-                        constraints: BoxConstraints(
-                          minHeight: 36,
-                          minWidth: 88,
-                        ),
-                        alignment: Alignment.center,
-                        child: Text('Manage', style: TextStyle(
-                          fontWeight: FontWeight.w300,
-                          fontSize: 17,
-                          color: Colors.white,
-                        ))
-                      ),
+                          constraints: BoxConstraints(
+                            minHeight: 36,
+                            minWidth: 88,
+                          ),
+                          alignment: Alignment.center,
+                          child: Text('Manage',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w300,
+                                fontSize: 17,
+                                color: Colors.white,
+                              ))),
                     ),
                   )
                 ],
@@ -541,37 +539,38 @@ class _PlanningPageState extends State<PlanningPage> {
             children: <Widget>[
               CircleAvatar(
                 backgroundColor: Colors.grey,
-                backgroundImage: NetworkImage("https://cdn.pixabay.com/photo/2016/06/01/08/40/money-1428594_960_720.jpg"),
+                backgroundImage: NetworkImage(
+                    "https://cdn.pixabay.com/photo/2016/06/01/08/40/money-1428594_960_720.jpg"),
                 radius: 36,
               ),
               SizedBox(width: 10.0),
               Column(
                 children: <Widget>[
                   RichText(
-                    text: TextSpan(
-                        text: 'Assets\n',
-                        style: TextStyle(
-                          color: Colors.red,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w400,
-                          height: 1.3,
-                        ),
-                        children: <TextSpan>[
-                          TextSpan(
-                              text: 'SAVINGS',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                              )),
-                        ])
-                  ),
-                  SizedBox(
-                    height: 6.0
-                  ),
+                      text: TextSpan(
+                          text: 'Assets\n',
+                          style: TextStyle(
+                            color: Colors.red,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400,
+                            height: 1.3,
+                          ),
+                          children: <TextSpan>[
+                        TextSpan(
+                            text: 'SAVINGS',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            )),
+                      ])),
+                  SizedBox(height: 6.0),
                   RaisedButton(
-                    onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> SavingsPage()));
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SavingsPage()));
                     },
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(80.0),
@@ -579,21 +578,22 @@ class _PlanningPageState extends State<PlanningPage> {
                     padding: const EdgeInsets.all(0.0),
                     child: Ink(
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: [Colors.redAccent, Colors.red]),
+                        gradient: LinearGradient(
+                            colors: [Colors.redAccent, Colors.red]),
                         borderRadius: BorderRadius.all(Radius.circular(80.0)),
                       ),
                       child: Container(
-                        constraints: BoxConstraints(
-                          minHeight: 36,
-                          minWidth: 88,
-                        ),
-                        alignment: Alignment.center,
-                        child: Text('Manage', style: TextStyle(
-                          fontWeight: FontWeight.w300,
-                          fontSize: 17,
-                          color: Colors.white,
-                        ))
-                      ),
+                          constraints: BoxConstraints(
+                            minHeight: 36,
+                            minWidth: 88,
+                          ),
+                          alignment: Alignment.center,
+                          child: Text('Manage',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w300,
+                                fontSize: 17,
+                                color: Colors.white,
+                              ))),
                     ),
                   )
                 ],
@@ -634,37 +634,38 @@ class _PlanningPageState extends State<PlanningPage> {
             children: <Widget>[
               CircleAvatar(
                 backgroundColor: Colors.grey,
-                backgroundImage: NetworkImage("https://cdn.pixabay.com/photo/2017/08/30/07/56/money-2696228_960_720.jpg"),
+                backgroundImage: NetworkImage(
+                    "https://cdn.pixabay.com/photo/2017/08/30/07/56/money-2696228_960_720.jpg"),
                 radius: 36,
               ),
               SizedBox(width: 10.0),
               Column(
                 children: <Widget>[
                   RichText(
-                    text: TextSpan(
-                        text: 'Assets\n',
-                        style: TextStyle(
-                          color: Colors.red,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w400, 
-                          height: 1.3,
-                        ),
-                        children: <TextSpan>[
-                          TextSpan(
-                              text: 'INVESTMENT',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                              )),
-                        ])
-                  ),
-                  SizedBox(
-                    height: 6.0
-                  ),
+                      text: TextSpan(
+                          text: 'Assets\n',
+                          style: TextStyle(
+                            color: Colors.red,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400,
+                            height: 1.3,
+                          ),
+                          children: <TextSpan>[
+                        TextSpan(
+                            text: 'INVESTMENT',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            )),
+                      ])),
+                  SizedBox(height: 6.0),
                   RaisedButton(
-                    onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> InvestmentPage()));
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => InvestmentPage()));
                     },
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(80.0),
@@ -672,21 +673,22 @@ class _PlanningPageState extends State<PlanningPage> {
                     padding: const EdgeInsets.all(0.0),
                     child: Ink(
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: [Colors.redAccent, Colors.red]),
+                        gradient: LinearGradient(
+                            colors: [Colors.redAccent, Colors.red]),
                         borderRadius: BorderRadius.all(Radius.circular(80.0)),
                       ),
                       child: Container(
-                        constraints: BoxConstraints(
-                          minHeight: 36,
-                          minWidth: 88,
-                        ),
-                        alignment: Alignment.center,
-                        child: Text('Manage', style: TextStyle(
-                          fontWeight: FontWeight.w300,
-                          fontSize: 17,
-                          color: Colors.white,
-                        ))
-                      ),
+                          constraints: BoxConstraints(
+                            minHeight: 36,
+                            minWidth: 88,
+                          ),
+                          alignment: Alignment.center,
+                          child: Text('Manage',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w300,
+                                fontSize: 17,
+                                color: Colors.white,
+                              ))),
                     ),
                   )
                 ],
@@ -727,37 +729,38 @@ class _PlanningPageState extends State<PlanningPage> {
             children: <Widget>[
               CircleAvatar(
                 backgroundColor: Colors.grey,
-                backgroundImage: NetworkImage("https://cdn.pixabay.com/photo/2017/06/27/11/48/team-spirit-2447163_960_720.jpg"),
+                backgroundImage: NetworkImage(
+                    "https://cdn.pixabay.com/photo/2017/06/27/11/48/team-spirit-2447163_960_720.jpg"),
                 radius: 36,
               ),
               SizedBox(width: 10.0),
               Column(
                 children: <Widget>[
                   RichText(
-                    text: TextSpan(
-                        text: 'Assets\n',
-                        style: TextStyle(
-                          color: Colors.red,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w400,
-                          height: 1.3,
-                        ),
-                        children: <TextSpan>[
-                          TextSpan(
-                              text: 'FAMILY & SPENDING',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                              )),
-                        ])
-                  ),
-                  SizedBox(
-                    height: 6.0
-                  ),
+                      text: TextSpan(
+                          text: 'Assets\n',
+                          style: TextStyle(
+                            color: Colors.red,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400,
+                            height: 1.3,
+                          ),
+                          children: <TextSpan>[
+                        TextSpan(
+                            text: 'FAMILY & SPENDING',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            )),
+                      ])),
+                  SizedBox(height: 6.0),
                   RaisedButton(
-                    onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> FamilyPage()));
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => FamilyPage()));
                     },
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(80.0),
@@ -765,21 +768,22 @@ class _PlanningPageState extends State<PlanningPage> {
                     padding: const EdgeInsets.all(0.0),
                     child: Ink(
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: [Colors.redAccent, Colors.red]),
+                        gradient: LinearGradient(
+                            colors: [Colors.redAccent, Colors.red]),
                         borderRadius: BorderRadius.all(Radius.circular(80.0)),
                       ),
                       child: Container(
-                        constraints: BoxConstraints(
-                          minHeight: 36,
-                          minWidth: 88,
-                        ),
-                        alignment: Alignment.center,
-                        child: Text('Manage', style: TextStyle(
-                          fontWeight: FontWeight.w300,
-                          fontSize: 17,
-                          color: Colors.white,
-                        ))
-                      ),
+                          constraints: BoxConstraints(
+                            minHeight: 36,
+                            minWidth: 88,
+                          ),
+                          alignment: Alignment.center,
+                          child: Text('Manage',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w300,
+                                fontSize: 17,
+                                color: Colors.white,
+                              ))),
                     ),
                   )
                 ],
