@@ -73,8 +73,8 @@ class _StepperBodyState extends State<StepperBody> {
           }
         },
         decoration: InputDecoration(
-          labelText: 'How much do you earn Monthly?',
-          hintText: 'Enter your Monthly Earnings',
+          labelText: 'How much do you earn Yearly?',
+          hintText: 'Enter your Yearly Earnings',
           icon: Icon(LineAwesomeIcons.money),
           labelStyle: TextStyle(
             decorationStyle: TextDecorationStyle.solid
@@ -100,8 +100,8 @@ class _StepperBodyState extends State<StepperBody> {
         },
         maxLines: 1,
         decoration: InputDecoration(
-          labelText: 'How much is the Monthly Bill?',
-          hintText: 'Monthly Bill?',
+          labelText: 'How much is the Yearly Bill?',
+          hintText: 'Yearly Bill?',
           icon: Icon(LineAwesomeIcons.money),
           labelStyle: TextStyle(decorationStyle: TextDecorationStyle.solid)
         ),
