@@ -1,3 +1,4 @@
+import 'package:financial_money_app/src/pages/InvestmentBalance.dart';
 import 'package:flutter/material.dart';
 
 import 'pages/BillsPage.dart';
@@ -19,6 +20,11 @@ class _PlanningPageState extends State<PlanningPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('MANAGE & GROW YOUR INCOME'),
+        centerTitle: true,
+        automaticallyImplyLeading: false,
+      ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
@@ -62,9 +68,9 @@ class _PlanningPageState extends State<PlanningPage> {
 
   _buildBackgroundCover() {
     return Container(
-      height: 260.0,
+      height: 200.0,
       decoration: BoxDecoration(
-          gradient: LinearGradient(colors: [Colors.redAccent, Colors.red]),
+          gradient: LinearGradient(colors: [Colors.red, Colors.red]),
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(40),
             bottomRight: Radius.circular(40),
@@ -273,7 +279,7 @@ class _PlanningPageState extends State<PlanningPage> {
                           ),
                           children: <TextSpan>[
                         TextSpan(
-                            text: 'EMERGENCY EXPENSES',
+                            text: 'EMERGENCY EXP...',
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 16,
@@ -665,7 +671,7 @@ class _PlanningPageState extends State<PlanningPage> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => InvestmentPage()));
+                              builder: (context) => InvestmentBalancePage()));
                     },
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(80.0),

@@ -252,7 +252,7 @@ class _BillsPageState extends State<BillsPage> {
                           ),
                           children: <TextSpan>[
                         TextSpan(
-                            text: 'STIPEND',
+                            text: 'STIPEND: Transportation,',
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 16,
