@@ -26,18 +26,14 @@ class _BillsPageState extends State<BillsPage> {
       child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            DrawerHeader(
-              child: Text('MANAGE & GROW YOUR INCOME',
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-                )
+            UserAccountsDrawerHeader(
+                accountName: Text('Tester Tester'),
+                accountEmail: Text('test@gmail.com'),
+                currentAccountPicture:
+                    Image.network('https://img.freepik.com/free-vector/businessman-profile-cartoon_18591-58479.jpg?size=338&ext=jpg'),
+                decoration: BoxDecoration(color: Colors.red
+                ),
               ),
-              decoration: BoxDecoration(
-                color: Colors.red,
-              ),
-            ),
             ListTile(
               leading: Icon(Icons.person),
               title: Text('EDIT PROFILE'),
