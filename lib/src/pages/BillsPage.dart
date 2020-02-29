@@ -5,6 +5,8 @@ import 'package:financial_money_app/src/pages/accountDetailsPage.dart';
 import 'package:financial_money_app/src/pages/profilePage.dart';
 import 'package:flutter/material.dart';
 import 'package:line_awesome_icons/line_awesome_icons.dart';
+import 'InvestmentBalance.dart';
+import 'PlanedAssetsPage.dart';
 
 class BillsPage extends StatefulWidget {
   @override
@@ -61,13 +63,23 @@ class _BillsPageState extends State<BillsPage> {
             ListTile(
               title: Text('PLANNED ASSETS'),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PlannedAssetsPage(),
+                  ),
+                );
               },
             ),
             ListTile(
               title: Text('INVESTMENT BALANCE'),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => InvestmentBalancePage(),
+                  ),
+                );
               },
             ),
             ListTile(
