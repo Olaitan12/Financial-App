@@ -31,7 +31,7 @@ class _BillsPageState extends State<BillsPage> {
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
-                color: Colors.tealAccent,
+                color: Colors.white,
                 )
               ),
               decoration: BoxDecoration(
@@ -39,6 +39,7 @@ class _BillsPageState extends State<BillsPage> {
               ),
             ),
             ListTile(
+              leading: Icon(Icons.person),
               title: Text('EDIT PROFILE'),
               onTap: () {
                 Navigator.push(
@@ -50,6 +51,7 @@ class _BillsPageState extends State<BillsPage> {
               },
             ),
             ListTile(
+              leading: Icon(Icons.attach_money),
               title: Text('ACCOUNT DETAILS'),
               onTap: () {
                 Navigator.push(
@@ -61,6 +63,7 @@ class _BillsPageState extends State<BillsPage> {
               },
             ),
             ListTile(
+              leading: Icon(Icons.landscape),
               title: Text('PLANNED ASSETS'),
               onTap: () {
                 Navigator.push(
@@ -71,7 +74,7 @@ class _BillsPageState extends State<BillsPage> {
                 );
               },
             ),
-            ListTile(
+            ListTile(leading: Icon(Icons.account_balance),
               title: Text('INVESTMENT BALANCE'),
               onTap: () {
                 Navigator.push(
@@ -83,6 +86,7 @@ class _BillsPageState extends State<BillsPage> {
               },
             ),
             ListTile(
+              leading: Icon(Icons.live_help),
               title: Text('CUSTOMER SERVICE'),
               onTap: () {
                 Navigator.pop(context);
@@ -91,7 +95,7 @@ class _BillsPageState extends State<BillsPage> {
           ],
         ),
       ),
-      backgroundColor: Colors.amber,
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
