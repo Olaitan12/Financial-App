@@ -358,14 +358,14 @@ class ProfilePageState extends State<ProfilePage>
                   });
                 },
                 shape: new RoundedRectangleBorder(
-                    borderRadius: new BorderRadius.circular(20.0)),
+                    borderRadius: new BorderRadius.circular(10.0)),
               )),
             ),
             flex: 2,
           ),
           Expanded(
             child: Padding(
-              padding: EdgeInsets.only(left: 10.0),
+              padding: EdgeInsets.only(left: 10.0,),
               child: Container(
                   child: new RaisedButton(
                 child: new Text("Cancel"),
@@ -378,7 +378,7 @@ class ProfilePageState extends State<ProfilePage>
                   });
                 },
                 shape: new RoundedRectangleBorder(
-                    borderRadius: new BorderRadius.circular(20.0)),
+                    borderRadius: new BorderRadius.circular(10.0)),
               )),
             ),
             flex: 2,
