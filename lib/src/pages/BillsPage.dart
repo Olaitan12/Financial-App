@@ -1,6 +1,8 @@
 import 'package:financial_money_app/src/files/DailyBills.dart';
 import 'package:financial_money_app/src/files/MonthlyBills.dart';
 import 'package:financial_money_app/src/files/YearlyBills.dart';
+import 'package:financial_money_app/src/pages/accountDetailsPage.dart';
+import 'package:financial_money_app/src/pages/profilePage.dart';
 import 'package:flutter/material.dart';
 import 'package:line_awesome_icons/line_awesome_icons.dart';
 
@@ -10,9 +12,73 @@ class BillsPage extends StatefulWidget {
 }
 
 class _BillsPageState extends State<BillsPage> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('MANAGE & GROW YOUR INCOME')
+      ),
+      key: _scaffoldKey,
+      drawer: Drawer(
+      child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              child: Text('MANAGE & GROW YOUR INCOME',
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+                color: Colors.tealAccent,
+                )
+              ),
+              decoration: BoxDecoration(
+                color: Colors.red,
+              ),
+            ),
+            ListTile(
+              title: Text('EDIT PROFILE'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ProfilePage(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              title: Text('ACCOUNT DETAILS'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => AccountDetailsPage(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              title: Text('PLANNED ASSETS'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text('INVESTMENT BALANCE'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text('CUSTOMER SERVICE'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        ),
+      ),
       backgroundColor: Colors.amber,
       body: SingleChildScrollView(
         child: Column(
@@ -51,9 +117,9 @@ class _BillsPageState extends State<BillsPage> {
 
   _buildBackgroundCover() {
     return Container(
-      height: 260.0,
+      height: 200.0,
       decoration: BoxDecoration(
-          gradient: LinearGradient(colors: [Colors.redAccent, Colors.red]),
+          gradient: LinearGradient(colors: [Colors.red, Colors.red]),
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(40),
             bottomRight: Radius.circular(40),
@@ -186,8 +252,10 @@ class _BillsPageState extends State<BillsPage> {
                   ),
                   RaisedButton(
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => DailyBills()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => DailyBills()));
                     },
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(80.0)),
@@ -280,8 +348,10 @@ class _BillsPageState extends State<BillsPage> {
                   ),
                   RaisedButton(
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => MonthlyBills()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MonthlyBills()));
                     },
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(80.0)),
@@ -374,8 +444,10 @@ class _BillsPageState extends State<BillsPage> {
                   ),
                   RaisedButton(
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => YearlyBills()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => YearlyBills()));
                     },
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(80.0)),
